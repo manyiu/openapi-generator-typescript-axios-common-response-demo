@@ -19,6 +19,21 @@ import { DUMMY_BASE_URL, assertParamExists, setApiKeyToObject, setBasicAuthToObj
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } from './base';
 
+export interface CommonResponse<T = any> {
+    'success': boolean;
+    'code': number;
+    'error'?: {
+        'traceId': string;
+        'errorCode': string;
+        'errorMessage': {
+            'en': string;
+            'zhHK': string;
+            'zhCN': string;
+        };
+    },
+    payload: T;
+}
+
 {{#models}}
 {{#model}}{{#isEnum}}{{>modelEnum}}{{/isEnum}}{{#oneOf}}{{#-first}}{{>modelOneOf}}{{/-first}}{{/oneOf}}{{^isEnum}}{{^oneOf}}{{>modelGeneric}}{{/oneOf}}{{/isEnum}}{{/model}}
 {{/models}}

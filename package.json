@@ -11,6 +11,7 @@
   "author": "Man Yiu",
   "license": "ISC",
   "dependencies": {
-    "@openapitools/openapi-generator-cli": "^2.4.26"
+    "@openapitools/openapi-generator-cli": "^2.4.26",
+    "axios": "^0.26.1"
   }
 }

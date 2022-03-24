@@ -43,6 +43,22 @@ export class BaseAPI {
             this.configuration = configuration;
             this.basePath = configuration.basePath || this.basePath;
         }
+
+        this.axios.interceptors.request.use(
+            (config) => config,
+            (error) => {
+                // TODO: Log error
+                return Promise.reject(error);
+            }
+        );
+
+        this.axios.interceptors.response.use(
+            (response) => response,
+            (error) => {
+                // TODO: Log error
+                return Promise.reject(error);
+            }
+        );
     }
 };
 

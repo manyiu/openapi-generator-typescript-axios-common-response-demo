@@ -2,9 +2,11 @@ lockfileVersion: 5.3
 
 specifiers:
   '@openapitools/openapi-generator-cli': ^2.4.26
+  axios: ^0.26.1
 
 dependencies:
   '@openapitools/openapi-generator-cli': 2.4.26
+  axios: 0.26.1
 
 packages:
 
@@ -131,6 +133,14 @@ packages:
 
   /axios/0.24.0:
     resolution: {integrity: sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA==}
+    dependencies:
+      follow-redirects: 1.14.9
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
+  /axios/0.26.1:
+    resolution: {integrity: sha512-fPwcX4EvnSHuInCMItEhAGnaSEXRBjtzh9fOtsE6E1G6p7vl7edEeZe11QHf18+6+9gR5PbKV/sGKNaD8YaMeA==}
     dependencies:
       follow-redirects: 1.14.9
     transitivePeerDependencies:
